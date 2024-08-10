@@ -5,6 +5,7 @@ import re
 router_address = '192.168.30.1'
 server_address = '0.0.0.0'
 
+
 def get_ip_prefixes_by_asn(asn):
     url = f"https://api.bgpview.io/asn/{asn}/prefixes"
     response = requests.get(url)
