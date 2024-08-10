@@ -1,0 +1,14 @@
+#Microsoft
+AS8075:100
+#Twitter
+AS13414:200
+#Amazon
+AS14618:300
+#Google + Youtube
+AS15169:400
+#Amazon AWS
+AS16509:500
+#Meta (FB)
+AS32934:600
+#Telegram
+AS62041:700
