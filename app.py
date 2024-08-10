@@ -2,6 +2,8 @@ import requests
 import subprocess
 import re
 
+router_address = '192.168.30.1'
+server_address = '0.0.0.0'
 
 def get_ip_prefixes_by_asn(asn):
     url = f"https://api.bgpview.io/asn/{asn}/prefixes"
@@ -20,11 +22,11 @@ def generate_exabgp_config(ip_prefixes, asn):
         routes += "}\n"
 
     config = f"""
-    neighbor 192.168.30.1 {{
+    neighbor {router_address} {{
         router-id 192.168.30.2;
         local-as {asn};
         peer-as 65001;
-        local-address 0.0.0.0;
+        local-address {server_address};
 
         family {{
             ipv4 unicast;
